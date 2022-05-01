@@ -52,6 +52,14 @@ public class Movement : MonoBehaviour
             {
                 playerAnimator.SetBool("Run", false);
             }
+            if ((Input.GetKey("d") && Input.GetKey("a") && Input.GetKey("w")) || (Input.GetKey("d") && Input.GetKey("a") && Input.GetKey("s")) || (Input.GetKey("right") && Input.GetKey("left") && Input.GetKey("up")) || (Input.GetKey("right") && Input.GetKey("left") && Input.GetKey("down")))
+            {
+                playerAnimator.SetBool("Run", true);
+            }
+            if ((Input.GetKey("w") && Input.GetKey("s") && Input.GetKey("a")) || (Input.GetKey("w") && Input.GetKey("s") && Input.GetKey("d")) || (Input.GetKey("up") && Input.GetKey("down") && Input.GetKey("right")) || (Input.GetKey("up") && Input.GetKey("down") && Input.GetKey("left")))
+            {
+                playerAnimator.SetBool("Run", true);
+            }
         }
         else
         {
