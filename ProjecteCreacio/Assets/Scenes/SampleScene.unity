@@ -2107,3 +2107,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RunSpeed: 3
   spriteRenderer: {fileID: 1698165844}
+  playerAnimator: {fileID: 1698165843}
