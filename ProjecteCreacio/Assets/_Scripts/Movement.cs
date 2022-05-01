@@ -44,6 +44,14 @@ public class Movement : MonoBehaviour
                 transform.Translate(new Vector2(0, -RunSpeed * Time.deltaTime), Space.World);
                 playerAnimator.SetBool("Run", true);
             }
+            if ((Input.GetKey("d") && Input.GetKey("a")) || (Input.GetKey("right") && Input.GetKey("left")))
+            {
+                playerAnimator.SetBool("Run", false);
+            }
+            if ((Input.GetKey("w") && Input.GetKey("s"))  || (Input.GetKey("up") && Input.GetKey("down")))
+            {
+                playerAnimator.SetBool("Run", false);
+            }
         }
         else
         {
