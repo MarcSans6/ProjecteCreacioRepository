@@ -3825,7 +3825,7 @@ TextureImporter:
         x: 96
         y: 1921
         width: 95
-        height: 94
+        height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3993,7 +3993,7 @@ TextureImporter:
         x: 864
         y: 1921
         width: 95
-        height: 94
+        height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
