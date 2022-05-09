@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d8a702541fd7d474fb2aaac5defe5965
 TextureImporter:
   internalIDToNameTable:
@@ -695,6 +696,11 @@ TextureImporter:
   - first:
       213: 3121042427097997393
     second: tileset x1_230
+=======
+guid: 5cea986807ae90f4092cccd0e79e1d9b
+TextureImporter:
+  internalIDToNameTable: []
+>>>>>>> fcc79c9c9bda46f2363783b977f2899fa5c194a3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -724,7 +730,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: 1
+>>>>>>> fcc79c9c9bda46f2363783b977f2899fa5c194a3
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -733,7 +743,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> fcc79c9c9bda46f2363783b977f2899fa5c194a3
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -764,6 +778,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -5630,6 +5645,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+>>>>>>> fcc79c9c9bda46f2363783b977f2899fa5c194a3
     outline: []
     physicsShape: []
     bones: []
