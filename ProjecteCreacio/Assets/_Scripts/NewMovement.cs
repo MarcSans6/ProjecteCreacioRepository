@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class NewMovement : MonoBehaviour
 {
+
+    public float runSpeed = 3f;
+
     Vector2 movementInput;
     public void OnMove(InputValue inputValue)
     {
@@ -32,16 +35,16 @@ public class NewMovement : MonoBehaviour
 
         if (vertical > 0)
         {
-            movement += Vector3.forward;
+            movement += Vector3.up;
         }
 
         if (vertical < 0)
         {
-            movement -= Vector3.forward;
+            movement -= Vector3.up;
         }
 
         movement.Normalize();
 
-        transform.position += movement * Time.deltaTime;
+        transform.position += movement * runSpeed * Time.deltaTime;
     }
 }
