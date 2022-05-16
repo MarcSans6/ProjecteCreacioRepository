@@ -1,5 +1,5 @@
 {
-    "name": "MyInput",
+    "name": "Player",
     "maps": [
         {
             "name": "Controls",
@@ -11,7 +11,8 @@
                     "id": "f97b1977-88fc-4646-9ad1-9015fb9b346e",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Shoot",
@@ -19,7 +20,8 @@
                     "id": "d6f541b3-67a1-4bee-a983-1f43bdf42739",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -80,12 +82,40 @@
                 },
                 {
                     "name": "",
-                    "id": "b3c5344c-5791-41e6-8255-ec5fd75f1dfc",
+                    "id": "0e4e3c4d-b19f-4a87-a596-44f0b6e24fab",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map",
+            "id": "5f5fdccf-3d4b-4c78-8803-fffa6becc780",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "f2106543-d6cd-4511-8642-e06e3d89b79b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4a6088d2-ac5b-4302-b438-4c265fb7f793",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
