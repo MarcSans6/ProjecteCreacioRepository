@@ -11,11 +11,11 @@ public class DisparoPlayer : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Disparar();
+            CreateBullet();
         }
     }
 
-    private void Disparar()
+    private void CreateBullet()
     {
         Instantiate(bala, controladorDisparo.position, controladorDisparo.rotation);
     }
