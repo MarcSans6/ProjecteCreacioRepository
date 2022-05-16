@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class NewMovement : MonoBehaviour
 {
+    Rigidbody2D rigidBody2D;
+    public float runSpeed = 3.0f;
+    public bool isFlipped;
+    public bool isRunning;
 
-    public float runSpeed = 3f;
 
     Vector2 movementInput;
     public void OnMove(InputValue inputValue)
@@ -15,36 +18,33 @@ public class NewMovement : MonoBehaviour
         movementInput = inputValue.Get<Vector2>();
     }
 
-    // Update is called once per frame
+    public void Start()
+    {
+        rigidBody2D = GetComponent<Rigidbody2D>();
+    }
+
     void FixedUpdate()
     {
-        Vector3 movement = Vector3.zero;
+        Vector3 movement = movementInput;
 
         float horizontal = movementInput.x;
         float vertical = movementInput.y;
 
         if (horizontal > 0)
         {
-            movement += Vector3.right;
+            isFlipped = false;
         }
 
         if (horizontal < 0)
         {
-            movement -= Vector3.right;
+            isFlipped = true;
         }
 
-        if (vertical > 0)
-        {
-            movement += Vector3.up;
-        }
-
-        if (vertical < 0)
-        {
-            movement -= Vector3.up;
-        }
+        if (movement != Vector3.zero) isRunning = true;
+        else isRunning = false;
 
         movement.Normalize();
 
-        transform.position += movement * runSpeed * Time.deltaTime;
+        rigidBody2D.velocity = movement * runSpeed;
     }
 }

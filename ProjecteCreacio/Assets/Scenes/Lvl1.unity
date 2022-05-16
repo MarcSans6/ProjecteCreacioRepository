@@ -5437,6 +5437,7 @@ GameObject:
   - component: {fileID: 1698165844}
   - component: {fileID: 1698165843}
   - component: {fileID: 1698165846}
+  - component: {fileID: 1698165850}
   - component: {fileID: 1698165847}
   - component: {fileID: 1698165848}
   - component: {fileID: 1698165849}
@@ -5545,6 +5546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 4
+  isFlipped: 0
+  isRunning: 0
 --- !u!61 &1698165847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5623,6 +5626,21 @@ MonoBehaviour:
   m_DefaultActionMap: Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1698165850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698165842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4808f8afd100a0c47bbe0d0e354d79ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  newMovement: {fileID: 0}
 --- !u!114 &1752662165
 MonoBehaviour:
   m_ObjectHideFlags: 0
