@@ -16,7 +16,7 @@ public class NewMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 movement = Vector3.zero;
 
