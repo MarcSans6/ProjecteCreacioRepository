@@ -13,7 +13,7 @@ public class EnemyAi : MonoBehaviour
     EState currentState;
     float currentTime;
     Dictionary<EState, State> States;
-
+    FSM<EState> brain;
     void Start()
     {
         States = new Dictionary<EState, State>();
@@ -26,7 +26,7 @@ public class EnemyAi : MonoBehaviour
 
         States[EState.Wander].OnEnter = () =>
         {
-            
+
         };
 
         States[EState.Attack].OnEnter = () =>
@@ -38,18 +38,9 @@ public class EnemyAi : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        switch (currentState)
-        {
-            case EState.Idle:
-                IdleUpdate();
-                break;
-            case EState.Wander:
-                WanderUpdate();
-                break;
-            case EState.Attack:
-                AttackUpdate();
-                break;
-        }
+        States[currentState].OnStay?.Invoke();
+        States[currentState].OnEnter?.Invoke();
+        States[currentState].OnExit?.Invoke();
     }
     void IdleUpdate()
     { }
