@@ -2124,6 +2124,8 @@ GameObject:
   - component: {fileID: 1012743536}
   - component: {fileID: 1012743535}
   - component: {fileID: 1012743537}
+  - component: {fileID: 1012743538}
+  - component: {fileID: 1012743539}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2167,9 +2169,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 825924901
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8037622637686558034, guid: 8d7c57b1530a75f479dea1c247384046,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2190,7 +2192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012743534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.22, y: -1.73, z: 0}
+  m_LocalPosition: {x: 7.68, y: -0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2208,6 +2210,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efb124d8f6776144912a3146d610f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1012743538
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012743534}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &1012743539
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012743534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04684639, y: 0.1167891}
+  m_Size: {x: 0.46030617, y: 0.6344693}
+  m_Direction: 0
 --- !u!1 &1050014700
 GameObject:
   m_ObjectHideFlags: 0
@@ -5684,6 +5723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotControler: {fileID: 493454358}
   bullet: {fileID: 8358108144295089594, guid: ef2e846556656394f8b2dd4caf9089a7, type: 3}
+  isShooting: 0
   chargeTime: 0.25
 --- !u!114 &1752662165
 MonoBehaviour:

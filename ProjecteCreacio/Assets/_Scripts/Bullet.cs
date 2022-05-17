@@ -20,9 +20,15 @@ public class Bullet : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        var enemy = other.GetComponent<IShootable>();
+
+        if (enemy != null)
+        {
+            enemy.TakeDamage(99999);
+            Destroy(gameObject);
+        }
     }
 
     private void OnBecameInvisible()
