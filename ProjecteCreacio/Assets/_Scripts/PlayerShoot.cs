@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private Transform shotControler;
     [SerializeField] private GameObject bullet;
+    GameObject player;
 
     public bool isShooting;
     public float chargeTime = 0.5f;

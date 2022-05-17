@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
 
-    public SpriteRenderer spriteRenderer;
-    public Animator playerAnimator;
-    public PlayerMovement playerMovement;
+    SpriteRenderer spriteRenderer;
+    Animator playerAnimator;
+    PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()

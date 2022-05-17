@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerShoot.isShooting)
         {
             rigidBody2D.velocity = Vector3.zero;
+            isRunning = false;
             return;
         }
 
