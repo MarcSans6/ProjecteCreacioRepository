@@ -15,12 +15,21 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Shoot",
+                    "name": "ShootStart",
                     "type": "Button",
                     "id": "d6f541b3-67a1-4bee-a983-1f43bdf42739",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootEnd",
+                    "type": "Button",
+                    "id": "4b3c0b9c-b983-4d33-9f68-61a51b8e35ea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -87,35 +96,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "ShootStart",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "New action map",
-            "id": "5f5fdccf-3d4b-4c78-8803-fffa6becc780",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "f2106543-d6cd-4511-8642-e06e3d89b79b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "4a6088d2-ac5b-4302-b438-4c265fb7f793",
-                    "path": "",
-                    "interactions": "",
+                    "id": "457a9d27-b41d-4a36-b770-b0803a4e6a0f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "ShootEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
