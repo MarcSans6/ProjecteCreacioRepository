@@ -28,7 +28,10 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (playerShoot.isShooting)
+        {
+            rigidBody2D.velocity = Vector3.zero;
             return;
+        }
 
         Vector3 movement = movementInput;
 
@@ -51,5 +54,6 @@ public class PlayerMovement : MonoBehaviour
         movement.Normalize();
 
         rigidBody2D.velocity = movement * runSpeed;
+
     }
 }
