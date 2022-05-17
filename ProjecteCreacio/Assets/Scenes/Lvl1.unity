@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493454358}
   m_Layer: 0
-  m_Name: Controlador Disparo
+  m_Name: Shot Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2123,9 +2123,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1012743536}
   - component: {fileID: 1012743535}
+  - component: {fileID: 1012743537}
   m_Layer: 0
-  m_Name: enemies x3_0
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2195,6 +2196,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012743537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012743534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efb124d8f6776144912a3146d610f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1050014700
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5590,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 4
+  isFlipped: 0
+  isRunning: 0
 --- !u!61 &1698165847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5667,8 +5682,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51109bbd06378c64688345c87fe2dc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controladorDisparo: {fileID: 493454358}
-  bala: {fileID: 8358108144295089594, guid: ef2e846556656394f8b2dd4caf9089a7, type: 3}
+  shotControler: {fileID: 493454358}
+  bullet: {fileID: 8358108144295089594, guid: ef2e846556656394f8b2dd4caf9089a7, type: 3}
+  chargeTime: 0.25
 --- !u!114 &1752662165
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
-public class NewMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+    PlayerShoot playerShoot;
     Rigidbody2D rigidBody2D;
     public float runSpeed = 3.0f;
     public bool isFlipped;
@@ -21,10 +22,14 @@ public class NewMovement : MonoBehaviour
     public void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
+        playerShoot = GetComponent<PlayerShoot>();
     }
 
     void FixedUpdate()
     {
+        if (playerShoot.isShooting)
+            return;
+
         Vector3 movement = movementInput;
 
         float horizontal = movementInput.x;
