@@ -5,23 +5,45 @@ using UnityEngine;
 
 public class BulletRotation : MonoBehaviour
 {
-    Vector3 movementInput;
+    PlayerMovement playerMovement;
+
+    Vector2 aimInput;
+    Vector2 aim;
+    float angleToRotate;
+    Quaternion rotation;
+
     public void OnMove(InputValue inputValue)
     {
-        movementInput = inputValue.Get<Vector2>();
+        Debug.Log("Aim");
+        aimInput = inputValue.Get<Vector2>();
     }
-    
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        playerMovement = GetComponent<PlayerMovement>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        Vector3 rotation = movementInput;
+        aim = aimInput;
 
-        transform.rotation = Quaternion.Euler(rotation);
+        float horizontal = aimInput.x;
+        float vertical = aimInput.y;
+        
+
+        aim.Normalize();
+
+        angleToRotate = Vector2.SignedAngle(Vector2.right, aim);
+        rotation = Quaternion.AngleAxis(angleToRotate, Vector3.forward);
+        transform.rotation = rotation;  
+        
+        if (horizontal > 0)
+        {
+            playerMovement.isFlipped = false;
+        }
+
+        if (horizontal < 0)
+        {
+            playerMovement.isFlipped = true;
+        }
     }
 }
