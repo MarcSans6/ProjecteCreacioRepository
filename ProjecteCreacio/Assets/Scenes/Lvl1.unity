@@ -2308,7 +2308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   checkRadius: 2
-  attackRadius: 1
+  attackRadius: 0.5
   shouldRotate: 0
   whatIsplayer:
     serializedVersion: 2
