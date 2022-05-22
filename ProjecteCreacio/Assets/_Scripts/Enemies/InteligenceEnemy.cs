@@ -19,7 +19,7 @@ public class InteligenceEnemy : MonoBehaviour
     public Vector3 direction;
 
     private bool isInChaseRange;
-    private bool isInAttackRange;
+    public bool isInAttackRange;
 
     private void Start()
     {

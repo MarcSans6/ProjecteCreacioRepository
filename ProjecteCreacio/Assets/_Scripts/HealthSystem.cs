@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour, IDamageTaker
 {
     [SerializeField]
-    private float maxHealth = 100.0f;
+    private float maxHealth = 3.0f;
 
     public float MaxHealth => maxHealth;
     public float CurrentHealth { get; private set; }
@@ -26,6 +26,7 @@ public class HealthSystem : MonoBehaviour, IDamageTaker
 
     public virtual void TakeDamage(float amount)
     {
+        Debug.Log("Took " + amount + " damage");
         CurrentHealth -= amount;
 
         OnHit?.Invoke(CurrentHealth / MaxHealth);

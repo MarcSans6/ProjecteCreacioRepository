@@ -6,10 +6,11 @@ using UnityEngine;
 public class BulletRotation : MonoBehaviour
 {
     PlayerMovement playerMovement;
+    PlayerShoot playerShoot;
 
+    float angleToRotate;
     Vector2 aimInput;
     Vector2 aim;
-    float angleToRotate;
     Quaternion rotation;
 
     public void OnAim(InputValue inputValue)
@@ -19,11 +20,17 @@ public class BulletRotation : MonoBehaviour
     }
     private void Start()
     {
+        playerShoot = GetComponentInParent<PlayerShoot>();
         playerMovement = GetComponentInParent<PlayerMovement>();
     }
     // Update is called once per frame
     void Update()
     {
+        if (!playerShoot.isShooting)
+        {
+            return;
+        }
+
         aim = aimInput;
 
         float horizontal = aimInput.x;
