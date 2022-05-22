@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 51109bbd06378c64688345c87fe2dc2c
+guid: 28dce7c627136a944b1ec8c17d2dd02a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - bullet: {fileID: 8358108144295089594, guid: ef2e846556656394f8b2dd4caf9089a7,
+  - EnemyShotController: {instanceID: 0}
+  - EnemyBulletPrefab: {fileID: 3896161739282402087, guid: 8f7c26f987af4de45b7864301344d796,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

@@ -5,19 +5,15 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    private Transform shotControler;
-    private GameObject bullet;
-    Rigidbody2D rigidbody2D;
+    public Transform shotControler;
+    public GameObject bullet;
 
     public bool isShooting;
     public float chargeTime = 0.5f;
     private float lastTimeFire;
 
-    private void Start()
-    {
-        rigidbody2D = GetComponentInChildren<Rigidbody2D>();
-    }
-    public void FixedUpdate()
+    
+    public void Update()
     {
         if (isShooting && lastTimeFire + chargeTime <= Time.time)
         {
@@ -35,7 +31,7 @@ public class PlayerShoot : MonoBehaviour
     }
     private void CreateBullet()
     {
-        Instantiate(bullet, bullet., shotControler.rotation);
+        Instantiate(bullet, shotControler.position, shotControler.rotation);
         lastTimeFire = Time.time;
     }
 }

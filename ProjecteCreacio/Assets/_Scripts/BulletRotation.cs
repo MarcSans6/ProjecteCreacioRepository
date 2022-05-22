@@ -12,14 +12,14 @@ public class BulletRotation : MonoBehaviour
     float angleToRotate;
     Quaternion rotation;
 
-    public void OnMove(InputValue inputValue)
+    public void OnAim(InputValue inputValue)
     {
         Debug.Log("Aim");
         aimInput = inputValue.Get<Vector2>();
     }
     private void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponentInParent<PlayerMovement>();
     }
     // Update is called once per frame
     void Update()
