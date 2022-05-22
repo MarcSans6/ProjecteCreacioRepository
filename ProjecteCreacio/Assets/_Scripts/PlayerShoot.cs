@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] private Transform shotControler;
-    [SerializeField] private GameObject bullet;
-    GameObject player;
+    public Transform shotControler;
+    public GameObject bullet;
 
     public bool isShooting;
     public float chargeTime = 0.5f;
     private float lastTimeFire;
 
-    public void FixedUpdate()
+    
+    public void Update()
     {
         if (isShooting && lastTimeFire + chargeTime <= Time.time)
         {
