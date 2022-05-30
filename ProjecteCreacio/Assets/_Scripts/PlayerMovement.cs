@@ -7,37 +7,16 @@ public class PlayerMovement : MonoBehaviour
 {
     PlayerShoot playerShoot;
     Rigidbody2D rigidBody2D;
+    public float runSpeed = 3.0f;
+    public bool isFlipped;
+    public bool isRunning;
 
-    public float m_RunSpeed = 3.0f;
-    public bool m_IsFlipped;
-    public bool m_IsRunning;
-    Vector2 m_MovementInput;
 
-    public float RunSpeed
-    {
-        get => m_RunSpeed;
-        set => m_RunSpeed = value;
-    }
-    public bool isFlipped
-    {
-        get => m_IsFlipped;
-        set => m_IsFlipped = value;
-    }
-    public bool isRunning
-    {
-        get => m_IsRunning;
-        set => m_IsRunning = value;
-    }
-    public Vector2 MovementDirection
-    {
-        get => m_MovementInput.normalized;
-        set => m_MovementInput = value;
-    }
-
+    Vector2 movementInput;
     public void OnMove(InputValue inputValue)
     {
-        Debug.Log("Player is moving");
-        m_MovementInput = inputValue.Get<Vector2>();
+        Debug.Log("Move");
+        movementInput = inputValue.Get<Vector2>();
     }
 
     public void Start()
@@ -51,29 +30,31 @@ public class PlayerMovement : MonoBehaviour
         if (playerShoot.isShooting)
         {
             rigidBody2D.velocity = Vector3.zero;
-            m_IsRunning = false;
+            isRunning = false;
             return;
         }
 
-        float horizontal = m_MovementInput.x;
-        float vertical = m_MovementInput.y;
+        Vector3 movement = movementInput;
+
+        float horizontal = movementInput.x;
+        float vertical = movementInput.y;
 
         if (horizontal > 0)
         {
-            m_IsFlipped = false;
+            isFlipped = false;
         }
 
         if (horizontal < 0)
         {
-            m_IsFlipped = true;
+            isFlipped = true;
         }
 
-        if (m_MovementInput != Vector2.zero) m_IsRunning = true;
-        else m_IsRunning = false;
+        if (movement != Vector3.zero) isRunning = true;
+        else isRunning = false;
 
-        m_MovementInput.Normalize();
+        movement.Normalize();
 
-        rigidBody2D.velocity = m_MovementInput * m_RunSpeed;
+        rigidBody2D.velocity = movement * runSpeed;
 
     }
 }
