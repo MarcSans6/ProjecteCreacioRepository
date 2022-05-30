@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5844385309901269281}
   - component: {fileID: -8638569562221514369}
   m_Layer: 0
-  m_Name: Bala
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2003c43d43163834babf743a9ee9ab54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  m_Speed: 10
+  m_BulletPlayerOffset: 0
+  m_SpawnRotation: 0
 --- !u!50 &-5844385309901269281
 Rigidbody2D:
   serializedVersion: 4

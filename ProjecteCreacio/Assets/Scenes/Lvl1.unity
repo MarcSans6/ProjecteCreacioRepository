@@ -151,7 +151,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.041666668}
   m_Children: []
   m_Father: {fileID: 1698165853}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &197672728
 MonoBehaviour:
@@ -1199,81 +1199,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &493454357
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 493454358}
-  - component: {fileID: 493454359}
-  - component: {fileID: 493454360}
-  m_Layer: 8
-  m_Name: Shot Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &493454358
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493454357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1698165853}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &493454359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493454357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad84ec5d116330144abce12662b3339e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &493454360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493454357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: a5216ed43bc4535478ac12cc6b2b4c9d,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Controls
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,13 +3884,13 @@ GameObject:
   - component: {fileID: 1698165844}
   - component: {fileID: 1698165843}
   - component: {fileID: 1698165846}
-  - component: {fileID: 1698165847}
-  - component: {fileID: 1698165848}
   - component: {fileID: 1698165849}
   - component: {fileID: 1698165850}
   - component: {fileID: 1698165851}
-  - component: {fileID: 1698165845}
   - component: {fileID: 1698165854}
+  - component: {fileID: 1698165848}
+  - component: {fileID: 1698165845}
+  - component: {fileID: 1698165847}
   - component: {fileID: 1698165852}
   m_Layer: 8
   m_Name: Player
@@ -4082,9 +4007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a742d55f865da34d830bc6b69fa39fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 4
-  isFlipped: 0
-  isRunning: 0
+  m_RunSpeed: 3
+  m_IsFlipped: 0
+  m_IsRunning: 0
 --- !u!61 &1698165847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4175,10 +4100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51109bbd06378c64688345c87fe2dc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotControler: {fileID: 493454358}
+  shotControler: {fileID: 0}
   bullet: {fileID: 8358108144295089594, guid: ef2e846556656394f8b2dd4caf9089a7, type: 3}
-  isShooting: 0
-  chargeTime: 0.25
+  m_BulletChargeTime: 0.5
 --- !u!114 &1698165851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4216,7 +4140,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 24}
   m_Children:
-  - {fileID: 493454358}
   - {fileID: 197672727}
   m_Father: {fileID: 0}
   m_RootOrder: 1

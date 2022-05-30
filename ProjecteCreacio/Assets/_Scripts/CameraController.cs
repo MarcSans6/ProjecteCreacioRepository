@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraPosition : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public float offSet = 10.0f;
     private Transform player;
     private Transform camera;
+
     // Start is called before the first frame update
     void Start()
     {
