@@ -6,7 +6,7 @@ public class BulletController : MonoBehaviour
     private PlayerMovement playerMovement;
     private Rigidbody2D rigidbody;
     
-    public float m_Speed = 10;
+    public float m_Speed = 10.0f;
     public float m_BulletPlayerOffset;
     private Vector3 m_SpawnPosition;
     private float m_SpawnRotation;
