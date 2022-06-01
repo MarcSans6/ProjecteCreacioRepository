@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bullet;
     private Rigidbody2D bulletRigidbody;
-    private BulletController bulletController;
+    public BulletController bulletController;
 
 
     private bool m_IsShooting;
@@ -33,7 +33,6 @@ public class PlayerShoot : MonoBehaviour
     public void Start()
     {
         bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-        bulletController = bullet.GetComponent<BulletController>();
     }
     public void Update()
     {
