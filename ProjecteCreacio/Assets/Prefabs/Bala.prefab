@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5927583898782430736}
   - component: {fileID: 7717299000467078545}
   - component: {fileID: 5100691681125941808}
-  - component: {fileID: 8633901444795817688}
   - component: {fileID: -5844385309901269281}
   - component: {fileID: -8638569562221514369}
   m_Layer: 0
@@ -71,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 825924901
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,6 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+<<<<<<< HEAD:ProjecteCreacio/Assets/Prefabs/Bala.prefab
 --- !u!114 &8633901444795817688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+=======
+>>>>>>> 3b7299390a8457dcf556958a76783517fd929ee3:ProjecteCreacio/Assets/Prefabs/Bullet.prefab
 --- !u!50 &-5844385309901269281
 Rigidbody2D:
   serializedVersion: 4
