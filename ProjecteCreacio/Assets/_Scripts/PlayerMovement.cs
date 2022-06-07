@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerShoot.isShooting)
+        if (playerShoot.IsShooting)
         {
             rigidBody2D.velocity = Vector3.zero;
             m_IsRunning = false;
