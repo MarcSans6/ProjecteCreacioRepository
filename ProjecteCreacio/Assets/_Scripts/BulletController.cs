@@ -2,7 +2,7 @@
 
 public class BulletController : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     private PlayerMovement playerMovement;
     private Rigidbody2D rigidbody;
     
@@ -24,7 +24,6 @@ public class BulletController : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         playerMovement = player.GetComponent<PlayerMovement>();
         rigidbody = GetComponent<Rigidbody2D>();
         SetVelocity();
@@ -46,7 +45,6 @@ public class BulletController : MonoBehaviour
     void SetPosition()
     {
         Vector3 vectorOffset = playerMovement.MovementDirection * m_BulletPlayerOffset;
-
         m_SpawnPosition = player.transform.position + vectorOffset;
     }
 
