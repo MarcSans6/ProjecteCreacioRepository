@@ -27,7 +27,7 @@ public class PlayerAnimation : MonoBehaviour
         spriteRenderer.flipX = playerMovement.m_IsFlipped;
         playerAnimator.SetBool("Run", playerMovement.m_IsRunning);
         playerAnimator.SetBool("Dead", playerIsDead.isDead);
-        playerAnimator.SetBool("Shoot", playerShoot.isShooting);
+        playerAnimator.SetBool("Shoot", playerShoot.IsShooting);
     }
 
     

@@ -26,7 +26,7 @@ public class BulletRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!playerShoot.isShooting)
+        if (!playerShoot.IsShooting)
         {
             return;
         }
