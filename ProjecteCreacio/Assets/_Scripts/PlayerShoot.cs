@@ -7,19 +7,14 @@ public class PlayerShoot : MonoBehaviour
 {
     public Transform shotControler;
     public GameObject bullet;
-<<<<<<< HEAD
-=======
     private Rigidbody2D bulletRigidbody;
     public BulletController bulletController;
->>>>>>> 3b7299390a8457dcf556958a76783517fd929ee3
 
-    public bool isShooting;
-    public float chargeTime = 0.5f;
-    private float lastTimeFire;
+    public bool m_isShooting;
+    public float m_chargeTime = 0.5f;
+    private float m_lastTimeFire;
 
-<<<<<<< HEAD
     
-=======
     private bool m_IsShooting;
     public float m_BulletChargeTime = 0.5f;
     private float m_LastTimeFire;
@@ -44,10 +39,9 @@ public class PlayerShoot : MonoBehaviour
     {
         bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
     }
->>>>>>> 3b7299390a8457dcf556958a76783517fd929ee3
     public void Update()
     {
-        if (isShooting && lastTimeFire + chargeTime <= Time.time)
+        if (m_isShooting && m_lastTimeFire + m_chargeTime <= Time.time)
         {
             Debug.Log("Shoot");
             CreateBullet();
@@ -55,15 +49,15 @@ public class PlayerShoot : MonoBehaviour
     }
     public void OnShootStart()
     {
-        isShooting = true;
+        m_isShooting = true;
     }
     public void OnShootEnd()
     {
-        isShooting = false;
+        m_isShooting = false;
     }
     private void CreateBullet()
     {
         Instantiate(bullet, shotControler.position, shotControler.rotation);
-        lastTimeFire = Time.time;
+        m_lastTimeFire = Time.time;
     }
 }

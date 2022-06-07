@@ -7,16 +7,21 @@ public class PlayerMovement : MonoBehaviour
 {
     PlayerShoot playerShoot;
     Rigidbody2D rigidBody2D;
-    public float runSpeed = 3.0f;
-    public bool isFlipped;
-    public bool isRunning;
-
+    public float m_RunSpeed = 3.0f;
+    public bool m_IsFlipped;
+    public bool m_IsRunning;
 
     Vector2 movementInput;
-    public void OnMove(InputValue inputValue)
+
+    public Vector2 MovementDirection
+    {
+        get => movementInput;
+        set => movementInput = value;
+    }
+    public void OnMove(InputValue _inputValue)
     {
         Debug.Log("Move");
-        movementInput = inputValue.Get<Vector2>();
+        movementInput = _inputValue.Get<Vector2>();
     }
 
     public void Start()
@@ -30,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerShoot.isShooting)
         {
             rigidBody2D.velocity = Vector3.zero;
-            isRunning = false;
+            m_IsRunning = false;
             return;
         }
 
@@ -41,20 +46,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontal > 0)
         {
-            isFlipped = false;
+            m_IsFlipped = false;
         }
 
         if (horizontal < 0)
         {
-            isFlipped = true;
+            m_IsFlipped = true;
         }
 
-        if (movement != Vector3.zero) isRunning = true;
-        else isRunning = false;
+        if (movement != Vector3.zero) m_IsRunning = true;
+        else m_IsRunning = false;
 
         movement.Normalize();
 
-        rigidBody2D.velocity = movement * runSpeed;
+        rigidBody2D.velocity = movement * m_RunSpeed;
 
     }
 }
