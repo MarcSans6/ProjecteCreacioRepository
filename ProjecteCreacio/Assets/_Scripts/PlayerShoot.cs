@@ -8,8 +8,7 @@ public class PlayerShoot : MonoBehaviour
     public bool m_IsShooting;
     public float m_BulletChargeTime = 0.5f;
     private float m_LastTimeFire;
-    public GameObject bullet;
-    private Rigidbody2D bulletRigidbody;
+    public GameObject mainCharacterBullet;
     public BulletController bulletController;
 
 
@@ -21,8 +20,6 @@ public class PlayerShoot : MonoBehaviour
 
     public void Start()
     {
-        bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-        bulletController = bullet.GetComponent<BulletController>();
     }
     public void Update()
     {
@@ -42,7 +39,10 @@ public class PlayerShoot : MonoBehaviour
     }
     private void CreateBullet()
     {
-        Instantiate(bullet, bulletController.position, Quaternion.AngleAxis(bulletController.rotation, Vector3.forward));
+        Debug.Log("Create bullet starts");
+        Instantiate(mainCharacterBullet, bulletController.Position, Quaternion.AngleAxis(bulletController.Rotation, Vector3.forward));
         m_LastTimeFire = Time.time;
+        Debug.Log("create bullet ends");
+
     }
 }

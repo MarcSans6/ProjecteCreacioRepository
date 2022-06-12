@@ -4461,7 +4461,7 @@ GameObject:
   - component: {fileID: 1625747737}
   - component: {fileID: 1625747736}
   m_Layer: 0
-  m_Name: BulletController
+  m_Name: MainCharacterBulletController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4479,6 +4479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2f79c6cb9ba1a4d90b1e532c7efe50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1698165842}
   m_Speed: 10
   m_BulletPlayerOffset: 0
 --- !u!4 &1625747737
@@ -4723,12 +4724,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51109bbd06378c64688345c87fe2dc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotControler: {fileID: 0}
-  bullet: {fileID: 8358108144295089594, guid: ef2e846556656394f8b2dd4caf9089a7, type: 3}
-  bulletController: {fileID: 0}
-  m_isShooting: 0
-  m_chargeTime: 0.5
+  m_IsShooting: 0
   m_BulletChargeTime: 0.5
+  mainCharacterBullet: {fileID: 4627633312392649069, guid: f6bd3bc620fea644e82b48ed02cabb5d,
+    type: 3}
+  bulletController: {fileID: 1625747736}
 --- !u!114 &1698165851
 MonoBehaviour:
   m_ObjectHideFlags: 0

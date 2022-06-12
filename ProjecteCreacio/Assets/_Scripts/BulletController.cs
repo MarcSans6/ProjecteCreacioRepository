@@ -2,21 +2,20 @@
 
 public class BulletController : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     private PlayerMovement playerMovement;
-    private Rigidbody2D rigidbody;
 
     public float m_Speed = 10.0f;
     public float m_BulletPlayerOffset;
     private Vector3 m_SpawnPosition;
     private float m_SpawnRotation;
 
-    public Vector3 position
+    public Vector3 Position
     {
         get => m_SpawnPosition;
         set => m_SpawnPosition = value;
     }
-    public float rotation
+    public float Rotation
     {
         get => m_SpawnRotation;
         set => m_SpawnRotation = value;
@@ -24,22 +23,21 @@ public class BulletController : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         playerMovement = player.GetComponent<PlayerMovement>();
-        rigidbody = GetComponent<Rigidbody2D>();
-        SetVelocity();
     }
     public void Update()
     {
         SetRotation();
         SetPosition();
     }
-    void SetVelocity()
-    {
-        rigidbody.velocity = transform.right * m_Speed;
-    }
+   
     void SetRotation()
     {
+        if (playerMovement.MovementDirection == null)
+        {
+            m_SpawnRotation = 0.0f;
+            return;
+        }
         float angle = Vector2.SignedAngle(Vector2.right, playerMovement.MovementDirection);
         m_SpawnRotation = angle;
     }
