@@ -5,65 +5,44 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public Transform shotControler;
-    public GameObject bullet;
-<<<<<<< HEAD
-=======
-    private Rigidbody2D bulletRigidbody;
-    public BulletController bulletController;
->>>>>>> 3b7299390a8457dcf556958a76783517fd929ee3
-
-    public bool isShooting;
-    public float chargeTime = 0.5f;
-    private float lastTimeFire;
-
-<<<<<<< HEAD
-    
-=======
-    private bool m_IsShooting;
+    public bool m_IsShooting;
     public float m_BulletChargeTime = 0.5f;
     private float m_LastTimeFire;
+    public GameObject bullet;
+    private Rigidbody2D bulletRigidbody;
+    public BulletController bulletController;
 
-    public bool isShooting
+
+    public bool IsShooting
     {
         get => m_IsShooting;
         set => m_IsShooting = value;
-    }
-    public float BulletChargeTime
-    {
-        get => m_BulletChargeTime;
-        set => m_BulletChargeTime = value;
-    }
-s    public float LastTimeFire
-    {
-        get => m_LastTimeFire;
-        set => m_LastTimeFire = value;
     }
 
     public void Start()
     {
         bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+        bulletController = bullet.GetComponent<BulletController>();
     }
->>>>>>> 3b7299390a8457dcf556958a76783517fd929ee3
     public void Update()
     {
-        if (isShooting && lastTimeFire + chargeTime <= Time.time)
+        if (m_IsShooting && m_LastTimeFire + m_BulletChargeTime <= Time.time)
         {
-            Debug.Log("Shoot");
+            Debug.Log("Player is shooting");
             CreateBullet();
         }
     }
     public void OnShootStart()
     {
-        isShooting = true;
+        m_IsShooting = true;
     }
     public void OnShootEnd()
     {
-        isShooting = false;
+        m_IsShooting = false;
     }
     private void CreateBullet()
     {
-        Instantiate(bullet, shotControler.position, shotControler.rotation);
-        lastTimeFire = Time.time;
+        Instantiate(bullet, bulletController.position, Quaternion.AngleAxis(bulletController.rotation, Vector3.forward));
+        m_LastTimeFire = Time.time;
     }
 }
