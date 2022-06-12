@@ -13,6 +13,17 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movementInput;
 
+    public bool IsFlipped
+    {
+        get => m_IsFlipped;
+        set => m_IsFlipped = value;
+    }
+    public bool IsRunning
+    {
+        get => m_IsRunning;
+        set => m_IsRunning = value;
+    }
+
     public Vector2 MovementDirection
     {
         get => movementInput;

@@ -39,10 +39,8 @@ public class PlayerShoot : MonoBehaviour
     }
     private void CreateBullet()
     {
-        Debug.Log("Create bullet starts");
         Instantiate(mainCharacterBullet, bulletController.Position, Quaternion.AngleAxis(bulletController.Rotation, Vector3.forward));
         m_LastTimeFire = Time.time;
-        Debug.Log("create bullet ends");
 
     }
 }
