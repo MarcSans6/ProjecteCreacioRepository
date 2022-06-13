@@ -24,10 +24,6 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerMovement.IsRunning)
-        {
-            playerShoot.IsShooting = false;
-        }
         spriteRenderer.flipX = playerMovement.IsFlipped;
         playerAnimator.SetBool("Run", playerMovement.IsRunning);
         playerAnimator.SetBool("Dead", playerIsDead.isDead);

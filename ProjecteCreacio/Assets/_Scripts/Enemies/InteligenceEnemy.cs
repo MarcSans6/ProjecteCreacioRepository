@@ -12,6 +12,7 @@ public class InteligenceEnemy : MonoBehaviour
 
     public LayerMask whatIsplayer;
 
+    private SpriteRenderer spriteRenderer;
     private Transform target;
     private Rigidbody2D rigidbody;
     private Animator animator;
@@ -25,6 +26,7 @@ public class InteligenceEnemy : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
@@ -44,6 +46,8 @@ public class InteligenceEnemy : MonoBehaviour
             animator.SetFloat("X", direction.x);
             animator.SetFloat("Y", direction.y);
         }
+
+        SetFlipX();
     }
 
     private void FixedUpdate()
@@ -56,6 +60,11 @@ public class InteligenceEnemy : MonoBehaviour
         {
             rigidbody.velocity = Vector2.zero;
         }
+    }
+
+    private void SetFlipX()
+    {
+        spriteRenderer.flipX = target.position.x - transform.position.x < 0;
     }
 
     private void MoveCharacter(Vector2 dir)
