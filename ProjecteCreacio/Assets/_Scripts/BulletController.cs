@@ -33,17 +33,17 @@ public class BulletController : MonoBehaviour
    
     void SetRotation()
     {
-        if (playerMovement.MovementDirection == null)
-        {
-            m_SpawnRotation = 0.0f;
-            return;
-        }
-        float angle = Vector2.SignedAngle(Vector2.right, playerMovement.MovementDirection);
+        //if (playerMovement.MovementDirection == null)
+        //{
+        //    m_SpawnRotation = 0.0f;
+        //    return;
+        //}
+        float angle = Vector2.SignedAngle(Vector2.right, playerMovement.Direction);
         m_SpawnRotation = angle;
     }
     void SetPosition()
     {
-        Vector3 vectorOffset = playerMovement.MovementDirection * m_BulletPlayerOffset;
+        Vector3 vectorOffset = playerMovement.Direction * m_BulletPlayerOffset;
 
         m_SpawnPosition = player.transform.position + vectorOffset;
     }

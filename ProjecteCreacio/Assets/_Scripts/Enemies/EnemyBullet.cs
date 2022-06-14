@@ -13,7 +13,7 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GameObject.Find("Enemy").GetComponent<Transform>();
+        enemy = GameObject.Find("Enemy01").GetComponent<Transform>();
         player = GameObject.Find("Player").GetComponent<Transform>();
         _rigidbody = GetComponent<Rigidbody2D>();
         

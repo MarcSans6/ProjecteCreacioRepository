@@ -45,12 +45,12 @@ public class BulletRotation : MonoBehaviour
         
         if (horizontal > 0)
         {
-            playerMovement.m_IsFlipped = false;
+            playerMovement.IsFlipped = false;
         }
 
         if (horizontal < 0)
         {
-            playerMovement.m_IsFlipped = true;
+            playerMovement.IsFlipped = true;
         }
     }
 }

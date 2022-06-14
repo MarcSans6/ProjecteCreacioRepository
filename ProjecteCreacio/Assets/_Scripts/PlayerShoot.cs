@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public bool m_IsShooting;
+    public int m_MaxAmmo = 30;
+    public int m_Ammo;
+    public float m_AddAmmoTime = 1.0f;
+    private bool m_IsShooting;
     public float m_BulletChargeTime = 0.5f;
     private float m_LastTimeFire;
+    private float m_LastTimeAddAmmo;
     public GameObject mainCharacterBullet;
     public BulletController bulletController;
 
@@ -20,14 +24,12 @@ public class PlayerShoot : MonoBehaviour
 
     public void Start()
     {
+        m_Ammo = m_MaxAmmo;
     }
     public void Update()
     {
-        if (m_IsShooting && m_LastTimeFire + m_BulletChargeTime <= Time.time)
-        {
-            Debug.Log("Player is shooting");
-            CreateBullet();
-        }
+        Shoot();
+        //AutomaticAdd1Ammo();
     }
     public void OnShootStart()
     {
@@ -41,6 +43,33 @@ public class PlayerShoot : MonoBehaviour
     {
         Instantiate(mainCharacterBullet, bulletController.Position, Quaternion.AngleAxis(bulletController.Rotation, Vector3.forward));
         m_LastTimeFire = Time.time;
+    }
 
+    private void AutoAdd1Ammo()
+    {
+        if (m_LastTimeAddAmmo + m_AddAmmoTime <= Time.time)
+        {
+            if (m_Ammo < m_MaxAmmo)
+            {
+                m_Ammo++;
+                m_LastTimeAddAmmo = Time.time;
+            }
+        }
+    }
+    private void AddAmmo(int amount)
+    {
+        m_Ammo += amount;
+        if (m_Ammo > m_MaxAmmo)
+        {
+            m_Ammo = m_MaxAmmo;
+        }
+    }
+    private void Shoot()
+    {
+        if (m_IsShooting && m_LastTimeFire + m_BulletChargeTime <= Time.time && m_Ammo > 0)
+        {
+            Debug.Log("Player is shooting");
+            CreateBullet();
+        }
     }
 }

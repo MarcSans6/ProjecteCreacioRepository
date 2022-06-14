@@ -32,7 +32,7 @@ public class InteligenceEnemy : MonoBehaviour
 
     private void Update()
     {
-        animator.SetBool("isRunning", isInChaseRange);
+        AnimationManager();
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsplayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsplayer);
 
@@ -66,7 +66,11 @@ public class InteligenceEnemy : MonoBehaviour
     {
         spriteRenderer.flipX = target.position.x - transform.position.x < 0;
     }
-
+    private void AnimationManager()
+    {
+        animator.SetBool("isRunning", isInChaseRange);
+        animator.SetBool("isAttacking", isInAttackRange);
+    }
     private void MoveCharacter(Vector2 dir)
     {
         rigidbody.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
