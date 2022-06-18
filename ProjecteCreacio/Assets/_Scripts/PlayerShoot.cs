@@ -33,6 +33,7 @@ public class PlayerShoot : MonoBehaviour
     public void Update()
     {
         Shoot();
+        ManageMaxAmmo();
         //AutomaticAdd1Ammo();
     }
     public void OnShootStart()
@@ -64,10 +65,6 @@ public class PlayerShoot : MonoBehaviour
     private void AddAmmo(int amount)
     {
         m_Ammo += amount;
-        if (m_Ammo > m_MaxAmmo)
-        {
-            m_Ammo = m_MaxAmmo;
-        }
     }
     private void Shoot()
     {
@@ -75,6 +72,14 @@ public class PlayerShoot : MonoBehaviour
         {
             Debug.Log("Player is shooting");
             CreateBullet();
+        }
+    }
+
+    private void ManageMaxAmmo()
+    {
+        if (m_Ammo > m_MaxAmmo)
+        {
+            m_Ammo = m_MaxAmmo;
         }
     }
 }

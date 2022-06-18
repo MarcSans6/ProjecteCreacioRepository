@@ -7,7 +7,7 @@ public class PickUpObject : MonoBehaviour
     public GameObject player;
     private Transform playerTransform;
     private BoxCollider2D playerCollider;
-    private PowerUpManager playerPowerUpManager;
+    public PowerUpManager powerUpManager;
     private BoxCollider2D collider;
     private Transform transform;
 
@@ -20,15 +20,15 @@ public class PickUpObject : MonoBehaviour
     private float m_CurrentReductionTime = 0.0f;
     private bool m_Reducted = false;
 
-    public string m_PowerUpTag;
+    private string m_PowerUpTag;
 
     void Start()
     {
         playerTransform = player.GetComponent<Transform>();
         playerCollider = player.GetComponent<BoxCollider2D>();
-        playerPowerUpManager = player.GetComponent<PowerUpManager>();
         transform = GetComponent<Transform>();
         collider = GetComponent<BoxCollider2D>();
+        m_PowerUpTag = name;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class PickUpObject : MonoBehaviour
                 if (m_Reducted)
                 {
                    Destroy(gameObject);
-                    playerPowerUpManager.ApplyPowerUp(m_PowerUpTag);
+                   powerUpManager.ApplyPowerUp(m_PowerUpTag);
                 }
             }
         }

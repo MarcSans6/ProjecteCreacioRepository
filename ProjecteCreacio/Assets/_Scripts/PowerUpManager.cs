@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    private HealthSystem healthSystem;
+    public GameObject player;
+    private HealthSystem playerHealthSystem;
     private PlayerShoot playerShoot;
 
     public int AmmoAdded = 10;
@@ -12,8 +13,8 @@ public class PowerUpManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthSystem = GetComponent<HealthSystem>();
-        playerShoot = GetComponent<PlayerShoot>();
+        playerHealthSystem = player.GetComponent<HealthSystem>();
+        playerShoot = player.GetComponent<PlayerShoot>();
     }
 
     // Update is called once per frame
@@ -26,10 +27,11 @@ public class PowerUpManager : MonoBehaviour
     {
         switch (_powerUpType)
         {
-            case "Health":
+            case "HealthPU":
                 HealthPowerUp();
                 break;
-            case "Ammo":
+            case "AmmoPU":
+                AmmoPowerUp();
                 break;
             default:
                 break;
