@@ -15,7 +15,11 @@ public class PlayerShoot : MonoBehaviour
     public GameObject mainCharacterBullet;
     public BulletController bulletController;
 
-
+    public int CurrentAmmo
+    {
+        get => m_Ammo;
+        set => m_Ammo = value;
+    }
     public bool IsShooting
     {
         get => m_IsShooting;
@@ -43,6 +47,7 @@ public class PlayerShoot : MonoBehaviour
     {
         Instantiate(mainCharacterBullet, bulletController.Position, Quaternion.AngleAxis(bulletController.Rotation, Vector3.forward));
         m_LastTimeFire = Time.time;
+        m_Ammo -= 1;
     }
 
     private void AutoAdd1Ammo()
