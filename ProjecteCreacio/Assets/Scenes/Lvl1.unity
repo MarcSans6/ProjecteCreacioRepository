@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 483145195}
   - component: {fileID: 483145194}
   - component: {fileID: 483145198}
+  - component: {fileID: 483145199}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1426,6 +1427,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPause: {fileID: 1860760289}
   menuPause: {fileID: 2030159160}
+--- !u!114 &483145199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483145193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8224715c4a45f7f4babb274a76d58873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  AmmoAdded: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,6 +4412,7 @@ Transform:
 --- !u!1 &1516691635
 GameObject:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4424,6 +4440,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.3439093
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1090287
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481720, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675644935048481727, guid: 0aebd6e082390384d83b09046711a193,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 675644935048481722, guid: 0aebd6e082390384d83b09046711a193, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0aebd6e082390384d83b09046711a193, type: 3}
+>>>>>>> b942e17aed2781e6e0a126708a302acc420be0ed
 --- !u!114 &1599349977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4559,14 +4644,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1698165853}
   - component: {fileID: 1698165844}
+  - component: {fileID: 1698165845}
+  - component: {fileID: 1698165848}
+  - component: {fileID: 1698165847}
   - component: {fileID: 1698165843}
   - component: {fileID: 1698165846}
-  - component: {fileID: 1698165847}
-  - component: {fileID: 1698165848}
   - component: {fileID: 1698165849}
   - component: {fileID: 1698165850}
   - component: {fileID: 1698165851}
-  - component: {fileID: 1698165845}
   - component: {fileID: 1698165852}
   m_Layer: 8
   m_Name: Player
