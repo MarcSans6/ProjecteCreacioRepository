@@ -6,7 +6,7 @@ public class DealDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var health = collision.GetComponent<IDamageTaker>();
+        var health = collision.GetComponent<HealthSystem>();
         if (health != null)
         {
             health.TakeDamage(Damage);
