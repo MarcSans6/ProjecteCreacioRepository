@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     PlayerShoot playerShoot;
     Rigidbody2D rigidBody2D;
+    HealthSystem healthSystem;
     public float m_RunSpeed = 3.0f;
     private bool m_IsFlipped;
     private bool m_IsRunning;
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnMove(InputValue _inputValue)
     {
-        Debug.Log("Move");
+        
         m_MovementInput = _inputValue.Get<Vector2>();
     }
 
@@ -44,13 +45,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
         playerShoot = GetComponent<PlayerShoot>();
+        healthSystem = GetComponent<HealthSystem>();
     }
 
     void FixedUpdate()
     {
         m_Direction = m_MovementInput;
 
-        if (playerShoot.IsShooting)
+        if (playerShoot.IsShooting || healthSystem.IsDead)
         {
             rigidBody2D.velocity = Vector3.zero;
             m_IsRunning = false;

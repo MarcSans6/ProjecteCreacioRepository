@@ -21,7 +21,6 @@ public class EnemyBulletShooting : MonoBehaviour
     {
         if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
         {
-            Debug.Log("EnemyShoot");
             CreateEnemyBullet();
         }
     }

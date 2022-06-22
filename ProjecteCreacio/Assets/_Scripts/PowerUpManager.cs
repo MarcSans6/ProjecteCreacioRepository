@@ -10,6 +10,10 @@ public class PowerUpManager : MonoBehaviour
 
     public int AmmoAdded = 10;
 
+    public GameObject Player
+    {
+        get => player;
+    }
     // Start is called before the first frame update
     void Start()
     {

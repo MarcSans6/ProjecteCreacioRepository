@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     private Transform playerTransform;
     private BoxCollider2D playerCollider;
-    public PowerUpManager powerUpManager;
+    private PowerUpManager powerUpManager;
     private BoxCollider2D collider;
     private Transform transform;
 
@@ -24,6 +24,8 @@ public class PickUpObject : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        powerUpManager = GameObject.FindObjectOfType<PowerUpManager>();
         playerTransform = player.GetComponent<Transform>();
         playerCollider = player.GetComponent<BoxCollider2D>();
         transform = GetComponent<Transform>();

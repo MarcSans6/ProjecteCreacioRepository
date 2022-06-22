@@ -8,7 +8,6 @@ public class PlayerAnimation : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator playerAnimator;
     PlayerMovement playerMovement;
-    PlayerIsDead playerIsDead;
     PlayerShoot playerShoot;
 
     // Start is called before the first frame update
@@ -17,7 +16,6 @@ public class PlayerAnimation : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerMovement = GetComponent<PlayerMovement>();
-        playerIsDead = GetComponent<PlayerIsDead>();
         playerShoot = GetComponent<PlayerShoot>();
     }
 
@@ -26,7 +24,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         spriteRenderer.flipX = playerMovement.IsFlipped;
         playerAnimator.SetBool("Run", playerMovement.IsRunning);
-        playerAnimator.SetBool("Dead", playerIsDead.isDead);
         playerAnimator.SetBool("Shoot", playerShoot.IsShooting);
     }
 

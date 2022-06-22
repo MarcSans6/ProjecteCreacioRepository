@@ -4,42 +4,48 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour, IDamageTaker
 {
-    [SerializeField]
-    private float maxHealth = 9.0f;
+    private Animator animator;
 
-    public float MaxHealth => maxHealth;
-    public float CurrentHealth { get; private set; }
+    public float m_MaxHealth = 10.0f;
+    private float m_CurrentHealth;
+    private bool m_IsDead;
 
-    public bool Dead { get; private set; }
-
-    public delegate void OnDeathDelegate();
-    public OnDeathDelegate OnDeath;
-
-    public delegate void OnHitDelegate(float fraction);
-    public OnHitDelegate OnHit;
-
-    protected virtual void Start()
+    public float CurrentHealth
     {
-        CurrentHealth = maxHealth;
-        Dead = false;
+        get => m_CurrentHealth;
+        set => m_CurrentHealth = value;
+    }
+    public bool IsDead
+    {
+        get => m_IsDead;
+    }
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        m_CurrentHealth = m_MaxHealth;
+        m_IsDead = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (UpdateDead())
+        {
+            animator.SetBool("Dead", true);
+        }
+
+
     }
 
     public virtual void TakeDamage(float amount)
     {
-        Debug.Log("Took " + amount + " damage");
-        CurrentHealth -= amount;
-
-        OnHit?.Invoke(CurrentHealth / MaxHealth);
-
-        if (CurrentHealth <= 0.0f && !Dead)
-        {
-            Die();
-        }
+        m_CurrentHealth -= amount;
     }
 
-    protected virtual void Die()
+    private bool UpdateDead()
     {
-        OnDeath?.Invoke();
-        Dead = true;
+        m_IsDead = m_CurrentHealth <= 0;
+        return m_IsDead;
     }
 }
