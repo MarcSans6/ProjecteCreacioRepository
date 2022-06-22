@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAi : MonoBehaviour
+public class Enemy03Ai : MonoBehaviour
 {
-    // Start is called before the first frame update
     enum EState
     {
         Idle, Wander, Attack
@@ -13,7 +12,7 @@ public class EnemyAi : MonoBehaviour
     EState currentState;
     float currentTime;
     Dictionary<EState, State> States;
-    FSM<EState> brain;
+    FSM01<EState> brain;
     void Start()
     {
         States = new Dictionary<EState, State>();
@@ -34,7 +33,7 @@ public class EnemyAi : MonoBehaviour
 
         };
     }
-    
+
     // Update is called once per frame
     private void Update()
     {
@@ -49,7 +48,7 @@ public class EnemyAi : MonoBehaviour
     void AttackUpdate()
     { }
 
-    void ChangeState (EState newState)
+    void ChangeState(EState newState)
     {
         switch (currentState)
         {

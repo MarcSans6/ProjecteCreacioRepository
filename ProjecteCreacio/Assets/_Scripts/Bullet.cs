@@ -22,11 +22,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var enemy = other.GetComponent<EnemyHealthSystem>();
+        var enemy = other.GetComponent<IShootable>();
 
         if (enemy != null)
         {
-            enemy.TakeDamage(1);
+            enemy.TakeDamage(99999);
             Destroy(gameObject);
         }
     }

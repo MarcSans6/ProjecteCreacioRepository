@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FSM<T> where T : Enum
+public class FSM01<T> where T : Enum
 {
     public T currentState;
     private Dictionary<T, State> States;
-    public FSM(T initState)
+    public FSM01(T initState)
     {
         States = new Dictionary<T, State>();
         foreach (T e in Enum.GetValues(typeof(T)))
