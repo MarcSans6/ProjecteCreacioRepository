@@ -25,11 +25,19 @@ public class PowerUpManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            HealthSystem eHealthSystem = enemy.GetComponent<HealthSystem>();
+            if (eHealthSystem != null)
+            {
+                if (eHealthSystem.IsDead)
+                {
+                    dropObjects.CreateRandomPowerUp();
+                }
+            }
+        }
     }
-    public void CreateRandomPowerUp(Transform _position)
-    {
-    }
+
     public void ApplyPowerUp(string _powerUpType)
     {
         switch (_powerUpType)

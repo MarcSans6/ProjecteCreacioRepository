@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyHealthSystem : MonoBehaviour, IDamageTaker
 {
     private Animator animator;
-    private PowerUpManager powerUpManager;
 
     public float m_MaxHealth = 10.0f;
     private float m_CurrentHealth;
@@ -24,7 +23,6 @@ public class EnemyHealthSystem : MonoBehaviour, IDamageTaker
     void Start()
     {
         animator = GetComponent<Animator>();
-        powerUpManager = GameObject.FindObjectOfType<PowerUpManager>();
         m_CurrentHealth = m_MaxHealth;
         m_IsDead = false;
     }
@@ -35,7 +33,6 @@ public class EnemyHealthSystem : MonoBehaviour, IDamageTaker
         if (UpdateDead())
         {
             animator.SetBool("Dead", true);
-            powerUpManager.CreateRandomPowerUp(gameObject.transform);
         }
 
 

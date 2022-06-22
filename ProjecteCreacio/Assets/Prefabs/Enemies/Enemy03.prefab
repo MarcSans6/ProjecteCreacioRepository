@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7992186903395918595}
   - component: {fileID: 7992186903395918604}
   - component: {fileID: 7992186903395918605}
+  - component: {fileID: 2453871905416824468}
   m_Layer: 0
   m_Name: Enemy03
   m_TagString: Untagged
@@ -206,9 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05eb98f07fad5c54284c09d2f7390f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  checkRadius: 3
-  attackRadius: 2
+  speed: 1
+  checkRadius: 6
+  attackRadius: 5
   shouldRotate: 0
   whatIsplayer:
     serializedVersion: 2
@@ -225,7 +226,7 @@ Animator:
   m_GameObject: {fileID: 7992186903395918606}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3774b2dc2f9962e4fb586c058822ec5c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -234,3 +235,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2453871905416824468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992186903395918606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fe924c7dbace746936b2f136087cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 5
