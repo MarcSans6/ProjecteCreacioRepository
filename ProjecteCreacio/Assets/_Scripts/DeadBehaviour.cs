@@ -7,7 +7,16 @@ public class DeadBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
+        CapsuleCollider2D capsule = animator.gameObject.GetComponent<CapsuleCollider2D>();
+        BoxCollider2D box = animator.gameObject.GetComponent<BoxCollider2D>();
+        if (capsule != null)
+        {
+            capsule.isTrigger = true;
+        }
+        else
+        {
+            box.isTrigger = true;
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

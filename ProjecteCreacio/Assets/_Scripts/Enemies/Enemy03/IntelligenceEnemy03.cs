@@ -18,7 +18,7 @@ public class IntelligenceEnemy03 : MonoBehaviour
     private Animator animator;
     private Vector2 movement;
     public Vector3 direction;
-
+    
     private bool isInChaseRange;
     public bool isInAttackRange;
 

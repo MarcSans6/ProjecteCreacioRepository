@@ -21,11 +21,24 @@ public class Enemy03Bullet : MonoBehaviour
         dir.Normalize();
 
         SetVelocity(dir);
+        SetRotation(dir);
     }
 
     void SetVelocity(Vector3 dir)
     {
         _rigidbody.velocity = dir * Speed;
+    }
+
+    void SetRotation(Vector3 dir)
+    {
+        if (dir.y >= 0)
+        {
+            _rigidbody.rotation = Vector3.Angle(new Vector3(1, 0), dir);
+        }
+        else
+        {
+            _rigidbody.rotation = Vector3.Angle(new Vector3(-1, 0), dir);
+        }
     }
 
 
