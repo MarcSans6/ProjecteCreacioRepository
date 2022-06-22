@@ -24,10 +24,7 @@ public class DropObjects : MonoBehaviour
             CreateRandomPowerUp();
         }
     }
-
-
-
-    private void CreateRandomPowerUp()
+    public void CreateRandomPowerUp()
     {
         if (Random.Range(1,3) == 1)
             Instantiate(healthPU, transform);

@@ -68,8 +68,14 @@ public class InteligenceEnemy : MonoBehaviour
     }
     private void AnimationManager()
     {
-        animator.SetBool("isRunning", isInChaseRange);
-        animator.SetBool("isAttacking", isInAttackRange);
+        if (isInChaseRange)
+            animator.SetBool("isRunning", true);
+        else
+            animator.SetBool("isRunning", false);
+        if (isInAttackRange)
+            animator.SetBool("isAttacking", true);
+        else
+            animator.SetBool("isAttacking", false);
     }
     private void MoveCharacter(Vector2 dir)
     {

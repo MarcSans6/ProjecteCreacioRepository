@@ -7,6 +7,7 @@ public class PowerUpManager : MonoBehaviour
     public GameObject player;
     private HealthSystem playerHealthSystem;
     private PlayerShoot playerShoot;
+    private DropObjects dropObjects;
 
     public int AmmoAdded = 10;
 
@@ -24,7 +25,17 @@ public class PowerUpManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            HealthSystem eHealthSystem = enemy.GetComponent<HealthSystem>();
+            if (eHealthSystem != null)
+            {
+                if (eHealthSystem.IsDead)
+                {
+                    dropObjects.CreateRandomPowerUp();
+                }
+            }
+        }
     }
 
     public void ApplyPowerUp(string _powerUpType)
@@ -44,6 +55,7 @@ public class PowerUpManager : MonoBehaviour
 
     private void HealthPowerUp()
     {
+        playerHealthSystem.CurrentHealth += 3;
     }
     private void AmmoPowerUp()
     {
