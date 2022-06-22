@@ -1440,6 +1440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  healthPU: {fileID: 0}
+  ammoPU: {fileID: 0}
   AmmoAdded: 10
 --- !u!1 &519420028
 GameObject:
@@ -4515,6 +4517,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1698165842}
+  healthPU: {fileID: 6473356658404367507, guid: 316a12193ff52a84db6a369e9e75b981,
+    type: 3}
+  ammoPU: {fileID: 5653940077831189230, guid: 988009a4241b9814083e46220d843169, type: 3}
   AmmoAdded: 10
 --- !u!4 &1653952571
 Transform:
