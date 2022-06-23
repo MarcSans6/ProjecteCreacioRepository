@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject particle;
     private Rigidbody2D _rigidbody;
     public float Speed = 10;
     // Start is called before the first frame update
@@ -27,12 +28,23 @@ public class Bullet : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(1);
-            Destroy(gameObject);
         }
+
+        if (other.gameObject.GetComponent<PlayerShoot>() == null)
+        {
+            DestroyBullet();
+        }
+
     }
 
     private void OnBecameInvisible()
     {
+        Destroy(gameObject);
+    }
+
+    private void DestroyBullet()
+    {
+        Instantiate(particle, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

@@ -38,11 +38,17 @@ public class PlayerShoot : MonoBehaviour
     }
     public void OnShootStart()
     {
-        m_IsShooting = true;
+        if (m_Ammo > 0)
+        {
+           m_IsShooting = true;
+        }
     }
     public void OnShootEnd()
     {
-        m_IsShooting = false;
+        if (m_Ammo > 0)
+        {
+           m_IsShooting = false;
+        }
     }
     private void CreateBullet()
     {
