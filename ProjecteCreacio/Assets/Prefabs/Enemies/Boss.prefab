@@ -277,7 +277,8 @@ MonoBehaviour:
     type: 3}
   enemyBulletPrefab02: {fileID: 5937705728501333371, guid: e24329f8acbb005458efee8b579231a7,
     type: 3}
-  chargeTime: 0.1
+  chargeTime01: 0.5
+  chargeTime02: 2
 --- !u!70 &3765130281441195635
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
