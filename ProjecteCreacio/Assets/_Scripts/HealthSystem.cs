@@ -6,8 +6,8 @@ public class HealthSystem : MonoBehaviour, IDamageTaker
 {
     private Animator animator;
 
-    public float m_MaxHealth = 10.0f;
-    private float m_CurrentHealth;
+    public float m_MaxHealth = 9.0f;
+    public float m_CurrentHealth;
     private bool m_IsDead;
     public AudioSource audioSource;
     public AudioClip DeadAudioClip;
