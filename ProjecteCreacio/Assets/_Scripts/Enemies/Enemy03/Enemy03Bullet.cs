@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy03Bullet : MonoBehaviour
 {
     private Transform player;
-    public Vector3 enemy;
+    private Transform enemy;
     private Rigidbody2D _rigidbody;
     public float Speed = 10;
     Vector3 dir;
@@ -13,11 +13,11 @@ public class Enemy03Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemy = GameObject.Find("Enemy03").GetComponent<Transform>();
         player = GameObject.Find("Player").GetComponent<Transform>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        dir = player.position - enemy;
+        dir = player.position - enemy.position;
         dir.Normalize();
 
         SetVelocity(dir);
