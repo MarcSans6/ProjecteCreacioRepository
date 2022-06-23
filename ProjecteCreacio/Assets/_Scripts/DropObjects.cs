@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DropObjects : MonoBehaviour
 {
-    private bool m_HasToDrop;
+    private bool m_HasToDrop = true;
     public GameObject healthPU;
     public GameObject ammoPU;
     private Transform transform;
