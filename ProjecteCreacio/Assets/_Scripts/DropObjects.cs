@@ -27,8 +27,8 @@ public class DropObjects : MonoBehaviour
     public void CreateRandomPowerUp()
     {
         if (Random.Range(1,3) == 1)
-            Instantiate(healthPU, transform);
+            Instantiate(healthPU, transform.position, transform.rotation);
         else
-            Instantiate(ammoPU, transform);
+            Instantiate(ammoPU, transform.position, transform.rotation);
     }
 }
