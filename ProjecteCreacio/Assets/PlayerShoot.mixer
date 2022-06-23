@@ -6,7 +6,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SoundMenu
+  m_Name: volume
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 54256c322c9b72a43a148faee98e4369
   m_Children: []
@@ -120,7 +120,8 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 5deb8a22b3da1464a95a18640278d138
-  m_FloatValues: {}
+  m_FloatValues:
+    da466eb82fd1ff84fabd0918fb9794e6: -2.5738313
   m_TransitionOverrides: {}
 --- !u!244 &8981932264073246333
 AudioMixerEffectController:
