@@ -46,7 +46,10 @@ public class PowerUpManager : MonoBehaviour
 
     private void HealthPowerUp()
     {
+        Debug.Log("StartsHealthAdded");
         playerHealthSystem.CurrentHealth += HealthAdded;
+        Debug.Log("EndsHealthAdded");
+
     }
     private void AmmoPowerUp()
     {

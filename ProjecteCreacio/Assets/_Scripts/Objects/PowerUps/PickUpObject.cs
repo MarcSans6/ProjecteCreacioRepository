@@ -30,7 +30,7 @@ public class PickUpObject : MonoBehaviour
         playerCollider = player.GetComponent<BoxCollider2D>();
         transform = GetComponent<Transform>();
         collider = GetComponent<BoxCollider2D>();
-        m_PowerUpTag = name;
+        m_PowerUpTag = gameObject.tag;
     }
 
     // Update is called once per frame
