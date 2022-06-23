@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
     private void CheckEnemiesAlive()
     {
-        m_LevelFinished = true;//GameObject.FindGameObjectsWithTag("Enemy") == null;
+        m_LevelFinished = GameObject.FindGameObjectsWithTag("Enemy").Length == 0;
     }
 
     private void OpenExitDoor()
