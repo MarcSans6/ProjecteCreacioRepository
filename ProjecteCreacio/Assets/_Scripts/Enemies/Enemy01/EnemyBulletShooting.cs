@@ -25,7 +25,7 @@ public class EnemyBulletShooting : MonoBehaviour
     {
         if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
         {
-            enemyBullet.enemy = gameObject.transform.position;
+            enemyBullet.enemyShotController = gameObject.transform.position;
             CreateEnemyBullet();
         }
 

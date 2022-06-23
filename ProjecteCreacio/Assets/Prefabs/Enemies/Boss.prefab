@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3315584578173305274}
   m_Layer: 0
-  m_Name: BossShotController2
+  m_Name: EnemyShotController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4630257627932615276}
   m_Layer: 0
-  m_Name: BossShotController
+  m_Name: EnemyShotController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

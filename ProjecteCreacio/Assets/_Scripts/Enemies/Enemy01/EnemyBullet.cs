@@ -6,7 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     public GameObject particle;
     private Transform player;
-    public Vector3 enemy;
+    public Vector3 enemyShotController;
     private Rigidbody2D _rigidbody;
     public float Speed = 10;
     Vector3 dir;
@@ -18,7 +18,7 @@ public class EnemyBullet : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Transform>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        dir = player.position - enemy;
+        dir = player.position - enemyShotController;
         dir.Normalize();
 
         SetVelocity(dir);

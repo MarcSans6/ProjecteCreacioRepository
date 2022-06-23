@@ -10,6 +10,8 @@ public class BossBulletShooting : MonoBehaviour
     public GameObject EnemyBulletPrefab;
     public GameObject EnemyBulletPrefab02;
     public System.Random alea = new System.Random();
+    private EnemyBullet enemyBullet;
+    private EnemyBullet enemyBullet02;
 
 
     private InteligenceEnemy inteligenceEnemy;
