@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3160364052270263831}
   - component: {fileID: 5173432187100785124}
   - component: {fileID: 7743772546424801547}
+  - component: {fileID: -1108257184798816907}
   m_Layer: 0
   m_Name: Enemy03
   m_TagString: Enemy
@@ -248,3 +249,18 @@ MonoBehaviour:
   EnemyBulletPrefab: {fileID: 2800230720316138087, guid: 2261b1927e48cdc45a08897c62131c39,
     type: 3}
   chargeTime: 0.9
+--- !u!114 &-1108257184798816907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992186903395918606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96bc58e9a994b845b080f005d7b6adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPU: {fileID: 6473356658404367507, guid: 316a12193ff52a84db6a369e9e75b981,
+    type: 3}
+  ammoPU: {fileID: 5653940077831189230, guid: 988009a4241b9814083e46220d843169, type: 3}
