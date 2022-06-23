@@ -32,6 +32,7 @@ public class HealthSystem : MonoBehaviour, IDamageTaker
     {
         if (UpdateDead())
         {
+            m_IsDead = true;
             animator.SetBool("Dead", true);
         }
 

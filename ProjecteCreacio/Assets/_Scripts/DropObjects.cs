@@ -4,31 +4,37 @@ using UnityEngine;
 
 public class DropObjects : MonoBehaviour
 {
+    private bool m_HasToDrop = true;
     public GameObject healthPU;
     public GameObject ammoPU;
     private Transform transform;
-    private HealthSystem healthSystem;
+    private EnemyHealthSystem enemyHealthSystem;
 
     // Start is called before the first frame update
     void Start()
     {
         transform = GetComponent<Transform>();
-        healthSystem = GetComponent<HealthSystem>();
+        enemyHealthSystem = GetComponent<EnemyHealthSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (healthSystem.IsDead)
+        if (m_HasToDrop)
         {
-            CreateRandomPowerUp();
+            if (enemyHealthSystem.IsDead)
+            {
+                CreateRandomPowerUp();
+                m_HasToDrop = false;
+            }
         }
+        
     }
     public void CreateRandomPowerUp()
     {
         if (Random.Range(1,3) == 1)
-            Instantiate(healthPU, transform);
+            Instantiate(healthPU, transform.position, transform.rotation);
         else
-            Instantiate(ammoPU, transform);
+            Instantiate(ammoPU, transform.position, transform.rotation);
     }
 }
