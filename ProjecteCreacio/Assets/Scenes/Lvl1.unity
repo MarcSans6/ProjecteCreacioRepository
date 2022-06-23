@@ -6118,6 +6118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxHealth: 10
+  audioSource: {fileID: 1698165854}
+  DeadAudioClip: {fileID: 8300000, guid: 506eb110da482944b99612b1e65de2a9, type: 3}
 --- !u!224 &1698165853
 RectTransform:
   m_ObjectHideFlags: 0

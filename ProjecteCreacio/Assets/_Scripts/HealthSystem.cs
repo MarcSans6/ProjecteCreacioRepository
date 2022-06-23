@@ -9,6 +9,8 @@ public class HealthSystem : MonoBehaviour, IDamageTaker
     public float m_MaxHealth = 10.0f;
     private float m_CurrentHealth;
     private bool m_IsDead;
+    public AudioSource audioSource;
+    public AudioClip DeadAudioClip;
 
     public float CurrentHealth
     {
@@ -33,6 +35,7 @@ public class HealthSystem : MonoBehaviour, IDamageTaker
         if (UpdateDead())
         {
             animator.SetBool("Dead", true);
+            audioSource.PlayOneShot(DeadAudioClip);
         }
 
 
