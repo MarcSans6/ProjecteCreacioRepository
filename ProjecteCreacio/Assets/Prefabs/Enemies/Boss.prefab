@@ -70,9 +70,13 @@ Transform:
   m_Children:
   - {fileID: 4630257627932615276}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 4630257628715751502}
   - {fileID: 4630257627706228525}
   - {fileID: 4630257627234964622}
+=======
+  - {fileID: 3315584578173305274}
+>>>>>>> parent of 10d6e74 (sds)
 =======
   - {fileID: 3315584578173305274}
 >>>>>>> parent of 10d6e74 (sds)
@@ -317,6 +321,7 @@ MonoBehaviour:
   EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
     type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   chargeTime: 0.1
 --- !u!114 &4630257627234497867
 MonoBehaviour:
@@ -426,6 +431,11 @@ Transform:
   m_Father: {fileID: 4630257627234497887}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  EnemyBulletPrefab02: {fileID: 5937705728501333371, guid: e24329f8acbb005458efee8b579231a7,
+    type: 3}
+  chargeTime: 0.1
+>>>>>>> parent of 10d6e74 (sds)
 =======
   EnemyBulletPrefab02: {fileID: 5937705728501333371, guid: e24329f8acbb005458efee8b579231a7,
     type: 3}
