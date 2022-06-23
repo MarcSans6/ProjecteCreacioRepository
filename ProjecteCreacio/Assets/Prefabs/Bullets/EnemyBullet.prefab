@@ -135,6 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8062d3ddeb5e444c9ef047d775dc1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 3276295337159871373, guid: 2a235bab8efe5dd499aad11af252d703,
+    type: 3}
+  enemy: {x: 0, y: 0, z: 0}
   Speed: 3
 --- !u!114 &5068858041360973915
 MonoBehaviour:

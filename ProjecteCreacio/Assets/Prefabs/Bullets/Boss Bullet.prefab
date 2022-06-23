@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7368078088930482248}
   - component: {fileID: -7676573600062426282}
   - component: {fileID: 4993474968382207073}
-  - component: {fileID: 6845177103842484212}
+  - component: {fileID: -8774965976957912338}
   m_Layer: 0
   m_Name: Boss Bullet
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
---- !u!114 &6845177103842484212
+--- !u!114 &-8774965976957912338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5930246956221739058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d685a46845bbc524fafdb0e816e8f465, type: 3}
+  m_Script: {fileID: 11500000, guid: b8062d3ddeb5e444c9ef047d775dc1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 3276295337159871373, guid: 2a235bab8efe5dd499aad11af252d703,
+    type: 3}
+  enemy: {x: 0, y: 0, z: 0}
   Speed: 10
