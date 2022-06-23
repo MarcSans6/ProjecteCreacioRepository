@@ -31,6 +31,7 @@ public class EnemyBulletShooting : MonoBehaviour
 
     private void CreateEnemyBullet()
     {
+        
         Instantiate(EnemyBulletPrefab, EnemyShotController.transform.position, EnemyShotController.rotation);
         lastTimeFire = Time.time;
     }
