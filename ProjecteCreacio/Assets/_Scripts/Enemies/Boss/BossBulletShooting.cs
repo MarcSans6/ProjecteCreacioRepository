@@ -10,8 +10,6 @@ public class BossBulletShooting : MonoBehaviour
     public GameObject EnemyBulletPrefab;
     public GameObject EnemyBulletPrefab02;
     public System.Random alea = new System.Random();
-    private EnemyBullet enemyBullet;
-    private EnemyBullet enemyBullet02;
 
 
     private InteligenceEnemy inteligenceEnemy;
@@ -21,8 +19,6 @@ public class BossBulletShooting : MonoBehaviour
     private void Start()
     {
         inteligenceEnemy = GetComponent<InteligenceEnemy>();
-        enemyBullet = EnemyBulletPrefab.GetComponent<EnemyBullet>();
-        enemyBullet02 = EnemyBulletPrefab.GetComponent<EnemyBullet>();
 
     }
 
@@ -30,8 +26,6 @@ public class BossBulletShooting : MonoBehaviour
     {
         if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
         {
-            enemyBullet.enemy = gameObject.transform.position;
-            enemyBullet02.enemy = gameObject.transform.position;
             CreateEnemyBullet();
         }
 

@@ -301,6 +301,7 @@ MonoBehaviour:
   EnemyShotController: {fileID: 4630257628715751502}
   EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
     type: 3}
+<<<<<<< HEAD
   spriteRenderer: {fileID: 0}
   chargeTime: 0.5
 --- !u!114 &4630257627234497866
@@ -397,6 +398,9 @@ Transform:
   m_Father: {fileID: 4630257627234497887}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  chargeTime: 0.1
+>>>>>>> parent of 959d7b3 (a)
 --- !u!1 &4630257627932615279
 GameObject:
   m_ObjectHideFlags: 0

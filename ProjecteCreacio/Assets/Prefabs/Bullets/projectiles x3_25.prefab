@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6026773960533983693}
   - component: {fileID: 436800282355978837}
+  - component: {fileID: -8975387627657931321}
   - component: {fileID: 3274733312524978308}
   - component: {fileID: 5390527112206380757}
   - component: {fileID: -3936907857552117633}
   - component: {fileID: -162123753011255888}
-  - component: {fileID: -6491406812969083693}
   m_Layer: 0
   m_Name: projectiles x3_25
   m_TagString: Untagged
@@ -87,6 +87,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8975387627657931321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937705728501333371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b3b38c17027c640afa43896b61f93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 3
 --- !u!70 &3274733312524978308
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -156,19 +169,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
---- !u!114 &-6491406812969083693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5937705728501333371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8062d3ddeb5e444c9ef047d775dc1ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particle: {fileID: 3276295337159871373, guid: 2a235bab8efe5dd499aad11af252d703,
-    type: 3}
-  enemy: {x: 0, y: 0, z: 0}
-  Speed: 10
