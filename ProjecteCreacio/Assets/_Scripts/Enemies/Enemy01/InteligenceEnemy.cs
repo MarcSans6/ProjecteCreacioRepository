@@ -7,6 +7,7 @@ public class InteligenceEnemy : MonoBehaviour
     public float speed;
     public float checkRadius;
     public float attackRadius;
+    
 
     public bool shouldRotate;
 
