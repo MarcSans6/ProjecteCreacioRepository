@@ -7,7 +7,7 @@ public class EnemyBulletShooting : MonoBehaviour
 {
     public Transform EnemyShotController;
     public GameObject EnemyBulletPrefab;
-    public SpriteRenderer spriteRenderer;
+    
 
     private InteligenceEnemy inteligenceEnemy;
 
@@ -26,7 +26,7 @@ public class EnemyBulletShooting : MonoBehaviour
             CreateEnemyBullet();
         }
 
-        SetFlipY();
+        
     }
 
     private void CreateEnemyBullet()
@@ -36,8 +36,5 @@ public class EnemyBulletShooting : MonoBehaviour
         lastTimeFire = Time.time;
     }
         
-    private void SetFlipY()
-    {
-        spriteRenderer.flipY = EnemyShotController.position.y - transform.position.y < 0;
-    }
+    
 }
