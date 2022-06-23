@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2522034037667479210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3315584578173305274}
+  m_Layer: 0
+  m_Name: BossShotController2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3315584578173305274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522034037667479210}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.15, y: 0.007, z: 0}
+  m_LocalScale: {x: 0.7692308, y: 0.7692308, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4630257627234497887}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4630257627234497881
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,10 +49,7 @@ GameObject:
   - component: {fileID: 4630257627234497885}
   - component: {fileID: 4630257627234497884}
   - component: {fileID: 4630257627234497864}
-  - component: {fileID: 4630257627234497858}
-  - component: {fileID: 4630257627234497867}
-  - component: {fileID: 4630257627234497866}
-  - component: {fileID: 4630257627234497861}
+  - component: {fileID: 7647985819117312960}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -42,9 +69,7 @@ Transform:
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children:
   - {fileID: 4630257627932615276}
-  - {fileID: 4630257628715751502}
-  - {fileID: 4630257627234964622}
-  - {fileID: 4630257627706228525}
+  - {fileID: 3315584578173305274}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -269,7 +294,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4630257627234497858
+--- !u!114 &7647985819117312960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,129 +303,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4630257627234497881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28dce7c627136a944b1ec8c17d2dd02a, type: 3}
+  m_Script: {fileID: 11500000, guid: ef7a6256a93ea7040981d294798509ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyShotController: {fileID: 4630257627932615276}
+  EnemyShotController02: {fileID: 3315584578173305274}
   EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
     type: 3}
-  spriteRenderer: {fileID: 0}
+  EnemyBulletPrefab02: {fileID: 5937705728501333371, guid: e24329f8acbb005458efee8b579231a7,
+    type: 3}
   chargeTime: 0.1
---- !u!114 &4630257627234497867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630257627234497881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28dce7c627136a944b1ec8c17d2dd02a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyShotController: {fileID: 4630257628715751502}
-  EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
-    type: 3}
-<<<<<<< HEAD
-  spriteRenderer: {fileID: 0}
-  chargeTime: 0.5
---- !u!114 &4630257627234497866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630257627234497881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28dce7c627136a944b1ec8c17d2dd02a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyShotController: {fileID: 4630257627234964622}
-  EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
-    type: 3}
-  spriteRenderer: {fileID: 0}
-  chargeTime: 1
---- !u!114 &4630257627234497861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630257627234497881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28dce7c627136a944b1ec8c17d2dd02a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyShotController: {fileID: 4630257627706228525}
-  EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
-    type: 3}
-  spriteRenderer: {fileID: 0}
-  chargeTime: 0.7
---- !u!1 &4630257627234964617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4630257627234964622}
-  m_Layer: 0
-  m_Name: BossShotController (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4630257627234964622
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630257627234964617}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.853, y: -0.492, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4630257627234497887}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4630257627706228524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4630257627706228525}
-  m_Layer: 0
-  m_Name: BossShotController (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4630257627706228525
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630257627706228524}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.757, y: -0.487, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4630257627234497887}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
-  chargeTime: 0.1
->>>>>>> parent of 959d7b3 (a)
 --- !u!1 &4630257627932615279
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,39 +337,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4630257627932615279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.863, y: -0.381, z: 0}
+  m_LocalPosition: {x: -0.806, y: -0.436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4630257627234497887}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4630257628715751497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4630257628715751502}
-  m_Layer: 0
-  m_Name: BossShotController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4630257628715751502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630257628715751497}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.752, y: -0.395, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4630257627234497887}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

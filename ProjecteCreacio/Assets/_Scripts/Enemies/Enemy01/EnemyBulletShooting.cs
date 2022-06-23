@@ -7,6 +7,7 @@ public class EnemyBulletShooting : MonoBehaviour
 {
     public Transform EnemyShotController;
     public GameObject EnemyBulletPrefab;
+    private EnemyBullet enemyBullet;
     
 
     private InteligenceEnemy inteligenceEnemy;
@@ -16,6 +17,7 @@ public class EnemyBulletShooting : MonoBehaviour
     private void Start()
     {
         inteligenceEnemy = GetComponent<InteligenceEnemy>();
+        enemyBullet = EnemyBulletPrefab.GetComponent<EnemyBullet>();
         
     }
 
@@ -23,6 +25,7 @@ public class EnemyBulletShooting : MonoBehaviour
     {
         if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
         {
+            enemyBullet.enemy = gameObject.transform.position;
             CreateEnemyBullet();
         }
 
