@@ -17,8 +17,10 @@ public class BossBulletShooting : MonoBehaviour
 
     private InteligenceEnemy inteligenceEnemy;
 
-    public float chargeTime = 1.0f;
-    private float lastTimeFire;
+    public float chargeTime01 = 1.0f;
+    public float chargeTime02 = 1.0f;
+    private float lastTimeFire01;
+    private float lastTimeFire02;
     private void Start()
     {
         inteligenceEnemy = GetComponent<InteligenceEnemy>();
@@ -30,7 +32,7 @@ public class BossBulletShooting : MonoBehaviour
 
     void Update()
     {
-        if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
+        if (inteligenceEnemy.isInAttackRange)
         {
             enemyBullet01.shotControllerPosition = enemyShotController01.position;
             enemyBullet02.shotControllerPosition = enemyShotController02.position;
@@ -48,13 +50,21 @@ public class BossBulletShooting : MonoBehaviour
 
         if (random<=7)
         {
-            Instantiate(enemyBulletPrefab01, enemyShotController01.position, enemyShotController01.rotation);
-            lastTimeFire = Time.time;
+            if (lastTimeFire01 + chargeTime01 <= Time.time)
+            {
+                Instantiate(enemyBulletPrefab01, enemyShotController01.position, enemyShotController01.rotation);
+                lastTimeFire01 = Time.time;
+
+            }
         }
         else
         {
-            Instantiate(enemyBulletPrefab02, enemyShotController02.position, enemyShotController02.rotation);
-            lastTimeFire = Time.time;
+            if (lastTimeFire02 + chargeTime02 <= Time.time)
+            {
+                Instantiate(enemyBulletPrefab02, enemyShotController02.position, enemyShotController02.rotation);
+                lastTimeFire02 = Time.time;
+            }
+                
         }
         
     }
