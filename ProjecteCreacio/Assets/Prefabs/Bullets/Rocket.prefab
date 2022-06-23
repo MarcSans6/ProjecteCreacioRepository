@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -162123753011255888}
   - component: {fileID: 827077474897355189}
   m_Layer: 0
-  m_Name: projectiles x3_25
+  m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8545451082115319517, guid: 8803519414c235347b258361dea61d4f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -170,5 +170,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 3276295337159871373, guid: 2a235bab8efe5dd499aad11af252d703,
     type: 3}
-  enemy: {x: 0, y: 0, z: 0}
+  enemyShotController: {x: 0, y: 0, z: 0}
   Speed: 5

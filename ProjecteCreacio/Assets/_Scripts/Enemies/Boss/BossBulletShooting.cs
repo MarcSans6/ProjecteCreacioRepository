@@ -5,13 +5,14 @@ using System;
 
 public class BossBulletShooting : MonoBehaviour
 {
-    public Transform EnemyShotController;
-    public Transform EnemyShotController02;
-    public GameObject EnemyBulletPrefab;
-    public GameObject EnemyBulletPrefab02;
-    public System.Random alea = new System.Random();
-    private EnemyBullet enemyBullet;
+    public Transform enemyShotController01;
+    public Transform enemyShotController02;
+    public GameObject enemyBulletPrefab01;
+    public GameObject enemyBulletPrefab02;  
+    private EnemyBullet enemyBullet01;
     private EnemyBullet enemyBullet02;
+
+    public System.Random alea = new System.Random();
 
 
     private InteligenceEnemy inteligenceEnemy;
@@ -21,6 +22,9 @@ public class BossBulletShooting : MonoBehaviour
     private void Start()
     {
         inteligenceEnemy = GetComponent<InteligenceEnemy>();
+        enemyBullet01 = enemyBulletPrefab01.GetComponent<EnemyBullet>();
+        enemyBullet02 = enemyBulletPrefab02.GetComponent<EnemyBullet>();
+        
 
     }
 
@@ -28,6 +32,8 @@ public class BossBulletShooting : MonoBehaviour
     {
         if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
         {
+            enemyBullet01.shotControllerPosition = enemyShotController01.position;
+            enemyBullet02.shotControllerPosition = enemyShotController02.position;
             CreateEnemyBullet();
         }
 
@@ -42,12 +48,12 @@ public class BossBulletShooting : MonoBehaviour
 
         if (random<=7)
         {
-            Instantiate(EnemyBulletPrefab, EnemyShotController.transform.position, EnemyShotController.rotation);
+            Instantiate(enemyBulletPrefab01, enemyShotController01.position, enemyShotController01.rotation);
             lastTimeFire = Time.time;
         }
         else
         {
-            Instantiate(EnemyBulletPrefab02, EnemyShotController02.transform.position, EnemyShotController02.rotation);
+            Instantiate(enemyBulletPrefab02, enemyShotController02.position, enemyShotController02.rotation);
             lastTimeFire = Time.time;
         }
         

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3315584578173305274}
   m_Layer: 0
-  m_Name: EnemyShotController
+  m_Name: EnemyShotController02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.014415741, y: -0.41814017}
@@ -160,7 +160,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25255585, y: 0.20803255}
@@ -186,7 +186,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.22822051, y: 0.21293104}
@@ -202,7 +202,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.66555715, y: -0.4459467}
@@ -293,7 +293,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7647985819117312960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,11 +306,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7a6256a93ea7040981d294798509ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyShotController: {fileID: 4630257627932615276}
-  EnemyShotController02: {fileID: 3315584578173305274}
-  EnemyBulletPrefab: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
+  enemyShotController01: {fileID: 4630257627932615276}
+  enemyShotController02: {fileID: 3315584578173305274}
+  enemyBulletPrefab01: {fileID: 5930246956221739058, guid: 0df44e4c84941f74290084ce9dd9b67a,
     type: 3}
-  EnemyBulletPrefab02: {fileID: 5937705728501333371, guid: e24329f8acbb005458efee8b579231a7,
+  enemyBulletPrefab02: {fileID: 5937705728501333371, guid: e24329f8acbb005458efee8b579231a7,
     type: 3}
   chargeTime: 0.1
 --- !u!1 &4630257627932615279
@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4630257627932615276}
   m_Layer: 0
-  m_Name: EnemyShotController
+  m_Name: EnemyShotController01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

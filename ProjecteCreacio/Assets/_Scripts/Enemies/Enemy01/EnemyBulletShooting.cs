@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyBulletShooting : MonoBehaviour
 {
-    public Transform EnemyShotController;
+    public Transform enemyShotController;
     public GameObject EnemyBulletPrefab;
     private EnemyBullet enemyBullet;
     
@@ -18,6 +18,7 @@ public class EnemyBulletShooting : MonoBehaviour
     {
         inteligenceEnemy = GetComponent<InteligenceEnemy>();
         enemyBullet = EnemyBulletPrefab.GetComponent<EnemyBullet>();
+        enemyShotController = GetComponentInChildren<Transform>();
         
     }
 
@@ -25,7 +26,7 @@ public class EnemyBulletShooting : MonoBehaviour
     {
         if (inteligenceEnemy.isInAttackRange && lastTimeFire + chargeTime <= Time.time)
         {
-            enemyBullet.enemyShotController = gameObject.transform.position;
+            enemyBullet.shotControllerPosition = enemyShotController.transform.position;
             CreateEnemyBullet();
         }
 
@@ -35,7 +36,7 @@ public class EnemyBulletShooting : MonoBehaviour
     private void CreateEnemyBullet()
     {
         
-        Instantiate(EnemyBulletPrefab, EnemyShotController.transform.position, EnemyShotController.rotation);
+        Instantiate(EnemyBulletPrefab, enemyShotController.transform.position, enemyShotController.rotation);
         lastTimeFire = Time.time;
     }
         
