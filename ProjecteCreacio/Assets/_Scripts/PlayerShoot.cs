@@ -14,6 +14,8 @@ public class PlayerShoot : MonoBehaviour
     private float m_LastTimeAddAmmo;
     public GameObject mainCharacterBullet;
     public BulletController bulletController;
+    public AudioSource audioSource;
+    public AudioClip shootingAudioClip;
 
     public int CurrentAmmo
     {
@@ -77,6 +79,7 @@ public class PlayerShoot : MonoBehaviour
         if (m_IsShooting && m_LastTimeFire + m_BulletChargeTime <= Time.time && m_Ammo > 0)
         {
             Debug.Log("Player is shooting");
+            audioSource.PlayOneShot(shootingAudioClip);
             CreateBullet();
         }
     }
